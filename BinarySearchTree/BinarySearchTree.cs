@@ -22,14 +22,11 @@ namespace BinarySearchTree
             root = null;
         }
 
-
         public void Add(int value)
         {
-            value = 55;
             Node newNode = new Node();
             newNode.data = value;
             bool haveAddedNewItem = false;
-
             if (root == null)
             {
                 root = newNode;
