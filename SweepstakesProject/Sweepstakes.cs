@@ -9,5 +9,33 @@ namespace SweepstakesProject
     class Sweepstakes
     {
 
+        public Sweepstakes()
+        {
+
+        }
+        
+        public class Sweepstakes(string name)
+        {
+
+        }
+
+        public void RegisterContestant(Contestant contestant)
+        {
+
+        }
+
+        public string PickWinner()
+        {
+
+        }
+
+        public void PrintContestantInfo(Contestant contestant)
+        {
+
+        }
+
+
+
+
     }
 }
