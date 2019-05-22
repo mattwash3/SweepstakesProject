@@ -8,6 +8,6 @@ namespace SweepstakesProject
 {
     interface IDictionary
     {
-        void Contestant();
+        void ContestantInfo();
     }
 }

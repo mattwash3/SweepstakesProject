@@ -20,20 +20,6 @@ namespace SweepstakesProject
             email = null;
             registrationNumber = null;
         }
-
-        public void GetContestantInfo()
-        {
-            Console.WriteLine("Enter your first name.");
-            firstName = Console.ReadLine();
-            Console.WriteLine("Enter your last name.");
-            lastName = Console.ReadLine();
-            Console.WriteLine("Enter your email address.");
-            email = Console.ReadLine();
-            //add code to generate a registration number for each contestant
-        }
-
-
-
     }
 
 
