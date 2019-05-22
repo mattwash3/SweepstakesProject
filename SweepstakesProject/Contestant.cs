@@ -18,17 +18,7 @@ namespace SweepstakesProject
             firstName = null;
             lastName = null;
             email = null;
-            registrationNumber = null;
+            registrationNumber = 0;
         }
     }
-
-
-
-
-
-
-
-
-
-
 }

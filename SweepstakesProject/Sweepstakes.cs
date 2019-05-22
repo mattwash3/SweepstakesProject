@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace SweepstakesProject
 {
-    public class Sweepstakes : IDictionary<TKey, TValue>
+    public class Sweepstakes
     {
-        //use underlying Dictionary data structure
-        Contestant contestant = new Contestant();
-        Random random = new Random();
-        public int key;
+        Dictionary<int, Contestant> contestants;
+        Random random = new Random(); 
         public int winner;
         public string name;
+        public int registrationNumber;
+        public int count;
 
         public Sweepstakes(string name)
         {
             this.name = name;
-            key = null;
-            winner = null;
+            winner = 0;
+            registrationNumber = 0;
         }
 
         public void RegisterContestant(Contestant contestant)
@@ -31,21 +31,24 @@ namespace SweepstakesProject
             Console.WriteLine("Enter your email address.");
             contestant.email = Console.ReadLine();
             //add code to generate a registration number for each contestant
-            key = contestant.registrationNumber;
-            Dictionary.append(key, contestant);
+            // add contestant to dictionary
+            registrationNumber = contestants.Keys;
+            contestants.Add(registrationNumber, contestant);
         }
 
         public string PickWinner(winner)
         {
+            count = contestants.Count();
             Console.WriteLine();
             int min = 1;
-            int max = 100;
+            int max = count;
             random = new Random();
             return random.Next(min, max);
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
+            
             Console.WriteLine();
         }
 

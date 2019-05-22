@@ -8,6 +8,6 @@ namespace SweepstakesProject
 {
     public class MarketingFirm
     {
-
+        ISweepstakesManager manager;
     }
 }
