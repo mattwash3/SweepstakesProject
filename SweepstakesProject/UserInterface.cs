@@ -39,21 +39,16 @@ namespace SweepstakesProject
         {
             for(int i = 0; i < 0; i++)
             {
-                if()
+                if(registrationNumber == 0)
+                {
+                    registrationNumber = i++;
+                }
+                else
+                {
+                    return i++;
+                }          
             }
+            return registrationNumber;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
+    }
 }

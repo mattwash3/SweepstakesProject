@@ -32,6 +32,7 @@ namespace SweepstakesProject
 
         public string PickWinner()
         {
+
             Console.WriteLine();
             int min = 1;
             int max = ;
