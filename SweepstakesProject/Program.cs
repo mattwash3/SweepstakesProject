@@ -10,7 +10,11 @@ namespace SweepstakesProject
     {
         static void Main(string[] args)
         {
+            Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+            Stack<Sweepstakes> sweepstakesStack = new Stack<Sweepstakes>();
+            Queue<Sweepstakes> sweepstakesQueue = new Queue<Sweepstakes>();
 
+            ISweepstakesManager manager = ;
         }
     }
 }

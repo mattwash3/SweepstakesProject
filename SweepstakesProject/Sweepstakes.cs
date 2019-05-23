@@ -13,7 +13,7 @@ namespace SweepstakesProject
         public int winner;
         public string name;
         public int registrationNumber;
-        public int count;
+        public int givenId;
 
         public Sweepstakes(string name)
         {
@@ -24,38 +24,26 @@ namespace SweepstakesProject
 
         public void RegisterContestant(Contestant contestant)
         {
-            Console.WriteLine("Enter your first name.");
-            contestant.firstName = Console.ReadLine();
-            Console.WriteLine("Enter your last name.");
-            contestant.lastName = Console.ReadLine();
-            Console.WriteLine("Enter your email address.");
-            contestant.email = Console.ReadLine();
             //add code to generate a registration number for each contestant
             // add contestant to dictionary
-            registrationNumber = contestants.Keys;
+            contestants.  ;
             contestants.Add(registrationNumber, contestant);
         }
 
-        public string PickWinner(winner)
+        public string PickWinner()
         {
-            count = contestants.Count();
             Console.WriteLine();
             int min = 1;
-            int max = count;
+            int max = ;
             random = new Random();
             return random.Next(min, max);
         }
 
         public void PrintContestantInfo(Contestant contestant)
-        {
-            
-            Console.WriteLine();
+        {         
+            Console.WriteLine("The Winner is " + contestant);
+            Console.ReadLine();
+            Console.Clear();
         }
-
-
-
-
     }
-
-
 }
