@@ -6,26 +6,21 @@ using System.Threading.Tasks;
 
 namespace BinarySearchTree
 {
-    public class Node
-    {
-        public int data;
-        public Node left;
-        public Node right;
-    }
-
     public class BinarySearchTree
     {
         public Node root;
 
         public BinarySearchTree()
         {
-            root = null;
+
         }
 
-        public void Add(int value)
+        public void CreateSearchTree(int value)
         {
             Node newNode = new Node();
-            newNode.data = value;
+            Node current;
+            //Node parentNode;
+            newNode.number = value;
             bool haveAddedNewItem = false;
             if (root == null)
             {
@@ -33,46 +28,100 @@ namespace BinarySearchTree
             }
             else
             {
-                Node current = root;     
+                current = root;     
                 while (!haveAddedNewItem)
                 {
-                    if (value < current.data)
+                    if (value < current.number)
                     {
-                        if(current.left == null)
+                        if(current.leftNode == null)
                         {
-                            current.left = newNode;
+                            current.leftNode = newNode;
                             haveAddedNewItem = true;
                         }
                         else
                         {
-                            current = current.left;
+                            current = current.leftNode;
                         }
                     }
                     else
                     {
-                        if (current.right == null)
+                        if (current.rightNode == null)
                         {
-                            current.right = newNode;
+                            current.rightNode = newNode;
                             haveAddedNewItem = true;
                         }
                         else
                         {
-                            current = current.right;
+                            current = current.rightNode;
                         }
                     }
                 }
             }
+
+            //Console.WriteLine();
+            //Console.ReadLine();
         }
 
-        public void Search()
+        public void Search(int value)
         {
+            Node currentNode;
+            if (root.number == value)
+            {
+                DisplayNumber();
+            }
+            if (value < root.number)
+            {
+                while(value < root.number)
+                {
+                    currentNode = root.leftNode;
+                    if (currentNode.number == value)
+                    {
+                      DisplayNumber();
+                    }
+                    else if (currentNode.number < value)
+                    {
+                        currentNode.leftNode = currentNode;
+                    }
+                    else if (currentNode.number > value)
+                    {
+                        currentNode.rightNode = currentNode;
+                    }
+                    else if (currentNode.number == null)
+                    {
+                        Console.WriteLine("404 Value Not Found");
+                    }
+                }
+            }
+            if (value > root.number)
+            {
+                while (value > root.number)
+                {
+                    currentNode = root.rightNode;
+                    if (currentNode.number == value)
+                    {
+                        DisplayNumber();
+                    }
+                    else if (currentNode.number < value)
+                    {
+                        currentNode.leftNode = currentNode;
+                    }
+                    else if (currentNode.number > value)
+                    {
+                        currentNode.rightNode = currentNode;
+                    }
+                    else if (currentNode.number == null)
+                    {
+                        Console.WriteLine("404 Value Not Found");
+                    }
+                }
+                
+            }
+        }
 
+        public void DisplayNumber()
+        {
+            Console.WriteLine("This might be your number, not entirely sure though..");
         }
 
     }
-
-
-
-
-
 }
